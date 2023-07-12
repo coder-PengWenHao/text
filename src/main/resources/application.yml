@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+oss:
+  accessKeyID: LTAI5tAALBQzJU1VJFw1jvpC
+  accessKeySecret: BaFotwVzsLvTIFEUzTaY4MC2GfTCDJ
+  roleArn: acs:ram::1088918147236349:role/ramoss
+  tokenExpireTime: 3600
+  endPoint: http://oss-cn-shenzhen.aliyuncs.com
+  policyFile: '{"Statement":[{"Action":["oss:*"],"Effect":"Allow","Resource":["acs:oss:*:*:*"]}],"Version":"1"}'
+  bucket: chuanyin-test
+  region: cn-shenzhen
+  faceImageUrl: http://119.23.55.54:3000/project/56/interface/api/257/
+
+
+
