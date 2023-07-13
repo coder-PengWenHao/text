@@ -13,4 +13,18 @@ oss:
   faceImageUrl: http://119.23.55.542352354
 
 
+logging:
+  file:
+    path: /logs/springboot
+  config: classpath:logback-spring.xml
+  pattern:
+
+
+
+
+
+
+
+
+
 
