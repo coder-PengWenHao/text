@@ -60,9 +60,11 @@ public class TestContrller {
     @RequestMapping(value = "/test_jvm", method = RequestMethod.GET)
     public void testJava(String text) throws Exception {
         log.info("oom开始.....");
+        log.error("oom开始与结束");
         List<OOMObject> list = new ArrayList<OOMObject>();
-        for (int i = 0; i < 2000; i++) {
-            Thread.sleep(50);
+        for (int i = 0; i < 80000; i++) {
+            new OOMObject();
+            new OOMObject();
             list.add(new OOMObject());
         }
         log.info("oom结束.....");
