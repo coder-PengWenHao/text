@@ -4,6 +4,7 @@ package com.example.text.web;
 import com.example.text.entity.OOMObject;
 import com.example.text.service.ImageService;
 import com.example.text.service.TestService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +14,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 @RequestMapping("/test")
 @RestController
 public class TestContrller {
@@ -20,7 +22,6 @@ public class TestContrller {
 
     @Resource
     private TestService testService;
-
 
 
     @Resource
@@ -58,15 +59,14 @@ public class TestContrller {
 
     @RequestMapping(value = "/test_jvm", method = RequestMethod.GET)
     public void testJava(String text) throws Exception {
+        log.info("oom开始.....");
         List<OOMObject> list = new ArrayList<OOMObject>();
-        for(int i=0;i<2000;i++){
+        for (int i = 0; i < 2000; i++) {
             Thread.sleep(50);
             list.add(new OOMObject());
         }
+        log.info("oom结束.....");
     }
-
-
-
 
 
 }
