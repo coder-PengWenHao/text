@@ -2,15 +2,15 @@ server:
   port: 8081
 
 oss:
-  accessKeyID: LTAI5235235
-  accessKeySecret: 423542354235
-  roleArn: acs:ram::1088918147236349:role/ramoss
-  tokenExpireTime: 3600
-  endPoint: http://oss-cn-shenzhen.aliyuncs.com
+  accessKeyID: 43132414fa
+  accessKeySecret: badafadf
+  roleArn: badfasfafas
+  tokenExpireTime: 098
+  endPoint: dfafdas
   policyFile: '{"Statement":[{"Action":["oss:*"],"Effect":"Allow","Resource":["acs:oss:*:*:*"]}],"Version":"1"}'
-  bucket: chuanyin-test
-  region: cn-shenzhen
-  faceImageUrl: http://119.23.55.542352354
+  bucket: fdadfafa
+  region: fdafasfsa
+  faceImageUrl: 1431243124
 
 
 

@@ -13,4 +13,6 @@ com/example/text/web/TestContrller.class
 com/example/text/TextApplication.class
 com/example/text/util/UploadCredentials.class
 com/example/text/service/ImageService.class
+com/example/text/web/TestContrller$1.class
 com/example/text/service/impl/TestServiceImpl.class
+com/example/text/web/TestContrller$2.class

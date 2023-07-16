@@ -104,4 +104,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 [0;39m[30mlogback-[0;39m [31m2023-07-16 15:25:52[0;39m [32m[restartedMain][0;39m [34mINFO [0;39m [1;35mo.a.coyote.http11.Http11NioProtocol[0;39m - [1;30mStarting ProtocolHandler ["http-nio-8081"]
 [0;39m[30mlogback-[0;39m [31m2023-07-16 15:25:52[0;39m [32m[restartedMain][0;39m [34mINFO [0;39m [1;35mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - [1;30mTomcat started on port(s): 8081 (http) with context path ''
 [0;39m[30mlogback-[0;39m [31m2023-07-16 15:25:52[0;39m [32m[restartedMain][0;39m [34mINFO [0;39m [1;35mcom.example.text.TextApplication[0;39m - [1;30mStarted TextApplication in 2.272 seconds (JVM running for 2.924)
+[0;39m[30mlogback-[0;39m [31m2023-07-16 15:27:27[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mc.example.text.TextApplicationTests[0;39m - [1;30mStarting TextApplicationTests using Java 1.8.0_311 on coderpwhs-MacBook-Pro.local with PID 74643 (started by coderpwh in /Users/coderpwh/workSpace/text)
+[0;39m[30mlogback-[0;39m [31m2023-07-16 15:27:27[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mc.example.text.TextApplicationTests[0;39m - [1;30mNo active profile set, falling back to 1 default profile: "default"
+[0;39m[30mlogback-[0;39m [31m2023-07-16 15:27:29[0;39m [32m[main][0;39m [34mINFO [0;39m [1;35mc.example.text.TextApplicationTests[0;39m - [1;30mStarted TextApplicationTests in 3.001 seconds (JVM running for 4.097)
 [0;39m
