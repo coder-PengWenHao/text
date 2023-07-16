@@ -15,14 +15,24 @@ import com.aliyuncs.http.MethodType;
 import com.aliyuncs.http.ProtocolType;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
+import com.example.text.entity.UserInfo;
 import com.example.text.service.TestService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.io.UnsupportedEncodingException;
 import java.util.*;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
+@Slf4j
 @Service
 public class TestServiceImpl implements TestService {
+
+
+    private static ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(50, new ThreadPoolExecutor.DiscardOldestPolicy());
+
 
 
     @Override
@@ -163,6 +173,61 @@ public class TestServiceImpl implements TestService {
         return "";
 
     }
+
+
+    /**
+     *
+     * @return
+     */
+    @Override
+    public String test3() {
+        try {
+            executor.setMaximumPoolSize(50);
+            while (true){
+                calc();
+                Thread.sleep(100);
+            }
+        }catch (Exception e){
+            log.error("异常信息为:{}",e.getMessage());
+        }
+        return "FAILED";
+    }
+
+
+    /***
+     * 模拟多线程计算
+     */
+    public void  calc(){
+        List<UserInfo> list = getAllUserInfo();
+        list.forEach(r->{
+           executor.scheduleWithFixedDelay(()->{
+                // 计算
+               r.other();
+           },2,3, TimeUnit.SECONDS) ;
+        });
+
+    }
+
+
+
+    /***
+     * 获取用户数据
+     * @return
+     */
+    public List<UserInfo> getAllUserInfo(){
+        List<UserInfo> list = new ArrayList<>();
+
+        for(int i=0;i<100;i++){
+            UserInfo userInfo = new UserInfo();
+            list.add(userInfo);
+        }
+        return  list;
+    }
+
+
+
+
+
 
 
 }

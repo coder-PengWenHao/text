@@ -72,7 +72,7 @@ public class TestContrller {
     }
 
     @RequestMapping(value = "/test_jvm2", method = RequestMethod.GET)
-    public void testJvm2() throws Exception{
+    public void testJvm2() throws Exception {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         br.readLine();
@@ -82,36 +82,38 @@ public class TestContrller {
         createLockThread(obj);
     }
 
-    public void createBusyThread(){
-        Thread  thread = new Thread(new Runnable() {
+    @RequestMapping(value = "/test_jvm3", method = RequestMethod.GET)
+    public Object testJvm3() throws Exception {
+        return testService.test3();
+    }
+
+    public void createBusyThread() {
+        Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 while (true)
                     ;
             }
-        },"testBusyThread");
+        }, "testBusyThread");
         thread.start();
     }
 
-    public void createLockThread(final Object lock){
+    public void createLockThread(final Object lock) {
 
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                synchronized (lock){
-                    try{
+                synchronized (lock) {
+                    try {
                         lock.wait();
-                    }catch (Exception e){
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
             }
-        },"testLockThread");
+        }, "testLockThread");
         thread.start();
     }
-
-
-
 
 
 }
