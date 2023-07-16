@@ -61,8 +61,8 @@ public class TestContrller {
     public void testJava(String text) throws Exception {
         log.info("oom开始.....");
         List<OOMObject> list = new ArrayList<OOMObject>();
-        for (int i = 0; i < 2000; i++) {
-            Thread.sleep(50);
+        for (int i = 0; i < 10000; i++) {
+//            Thread.sleep(50);
             list.add(new OOMObject());
         }
         log.info("oom结束.....");
