@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8081
 
 oss:
   accessKeyID: LTAI5235235
@@ -13,14 +13,20 @@ oss:
   faceImageUrl: http://119.23.55.542352354
 
 
+#logging:
+#  file:
+##    path: /usr/local/java_workspace/logs
+#     path: /Users/coderpwh/workSpace/logs/text/logs
+#  config: classpath:logback-spring.xml
+#  pattern:
+#    console: 'logging.pattern.console=[%d{yyyy-MM-dd HH:mm:ss}] -- [%-5p]: [%c] -- %m%n'
+#    file: '[%d{yyyy-MM-dd HH:mm:ss}] -- [%-5p]: [%c] -- %m%n'
 logging:
-  file:
-    path: /logs/springboot
   config: classpath:logback-spring.xml
-  pattern:
-    console: 'logging.pattern.console=[%d{yyyy-MM-dd HH:mm:ss}] -- [%-5p]: [%c] -- %m%n'
-    file: '[%d{yyyy-MM-dd HH:mm:ss}] -- [%-5p]: [%c] -- %m%n'
-
+  file:
+    path: /Users/coderpwh/workSpace/logs/text/logs
+  level:
+     ROOT: info
 
 
 
