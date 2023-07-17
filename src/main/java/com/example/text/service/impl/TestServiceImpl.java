@@ -34,7 +34,6 @@ public class TestServiceImpl implements TestService {
     private static ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(50, new ThreadPoolExecutor.DiscardOldestPolicy());
 
 
-
     @Override
     public String test1(String text) throws UnsupportedEncodingException {
         String result = "";
@@ -176,20 +175,21 @@ public class TestServiceImpl implements TestService {
 
 
     /**
-     *
      * @return
      */
     @Override
     public String test3() {
         try {
+            log.info("开始执行test3");
             executor.setMaximumPoolSize(50);
-            while (true){
+            while (true) {
                 calc();
                 Thread.sleep(100);
             }
-        }catch (Exception e){
-            log.error("异常信息为:{}",e.getMessage());
+        } catch (Exception e) {
+            log.error("异常信息为:{}", e.getMessage());
         }
+        log.info("开始执行test3结束");
         return "FAILED";
     }
 
@@ -197,37 +197,31 @@ public class TestServiceImpl implements TestService {
     /***
      * 模拟多线程计算
      */
-    public void  calc(){
+    public void calc() {
         List<UserInfo> list = getAllUserInfo();
-        list.forEach(r->{
-           executor.scheduleWithFixedDelay(()->{
+        list.forEach(r -> {
+            executor.scheduleWithFixedDelay(() -> {
                 // 计算
-               r.other();
-           },2,3, TimeUnit.SECONDS) ;
+                r.other();
+            }, 2, 3, TimeUnit.SECONDS);
         });
 
     }
-
 
 
     /***
      * 获取用户数据
      * @return
      */
-    public List<UserInfo> getAllUserInfo(){
+    public List<UserInfo> getAllUserInfo() {
         List<UserInfo> list = new ArrayList<>();
 
-        for(int i=0;i<100;i++){
+        for (int i = 0; i < 100; i++) {
             UserInfo userInfo = new UserInfo();
             list.add(userInfo);
         }
-        return  list;
+        return list;
     }
-
-
-
-
-
 
 
 }
