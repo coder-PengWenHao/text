@@ -7,7 +7,7 @@ oss:
   roleArn: badfasfafas
   tokenExpireTime: 098
   endPoint: dfafdas
-  policyFile: '{"Statement":[{"Action":["oss:*"],"Effect":"Allow","Resource":["acs:oss:*:*:*"]}],"Version":"1"}'
+  policyFile: '3421243124312'
   bucket: fdadfafa
   region: fdafasfsa
   faceImageUrl: 1431243124
