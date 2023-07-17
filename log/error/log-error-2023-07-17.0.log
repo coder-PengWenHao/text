@@ -1,0 +1,43 @@
+[30mlogback-[0;39m [31m2023-07-17 15:32:52[0;39m [32m[restartedMain][0;39m [1;31mERROR[0;39m [1;35mo.s.b.d.LoggingFailureAnalysisReporter[0;39m - [1;30m
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+[0;39m[30mlogback-[0;39m [31m2023-07-17 15:33:26[0;39m [32m[restartedMain][0;39m [1;31mERROR[0;39m [1;35mo.s.b.d.LoggingFailureAnalysisReporter[0;39m - [1;30m
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+[0;39m[30mlogback-[0;39m [31m2023-07-17 15:33:42[0;39m [32m[restartedMain][0;39m [1;31mERROR[0;39m [1;35mo.s.b.d.LoggingFailureAnalysisReporter[0;39m - [1;30m
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+[0;39m

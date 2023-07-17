@@ -1,0 +1,5 @@
+[30mlogback-[0;39m [31m2023-07-16 15:25:34[0;39m [32m[restartedMain][0;39m [31mWARN [0;39m [1;35mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - [1;30mException encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testContrller' method 
+com.example.text.web.TestContrller#testJvm2()
+to {GET [/test/test_jvm]}: There is already 'testContrller' bean method
+com.example.text.web.TestContrller#testJava(String) mapped.
+[0;39m

@@ -4,12 +4,15 @@ package com.example.text.web;
 import com.example.text.entity.OOMObject;
 import com.example.text.service.ImageService;
 import com.example.text.service.TestService;
+import jdk.nashorn.internal.ir.WhileNode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
@@ -68,6 +71,51 @@ public class TestContrller {
             list.add(new OOMObject());
         }
         log.info("oom结束.....");
+    }
+
+    @RequestMapping(value = "/test_jvm2", method = RequestMethod.GET)
+    public void testJvm2() throws Exception {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        br.readLine();
+        createBusyThread();
+        br.readLine();
+        Object obj = new Object();
+        createLockThread(obj);
+    }
+
+    @RequestMapping(value = "/test_jvm3", method = RequestMethod.GET)
+    public Object testJvm3() throws Exception {
+        return testService.test3();
+    }
+
+    public void createBusyThread() {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+
+                }
+            }
+        }, "testBusyThread");
+        thread.start();
+    }
+
+    public void createLockThread(Object lock) {
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                synchronized (lock) {
+                    try {
+                        lock.wait();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }, "testLockThread");
+        thread.start();
     }
 
 

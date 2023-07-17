@@ -1,27 +1,16 @@
 server:
-  port: 8082
+  port: 8081
 
 oss:
-  accessKeyID: LTAI5235235
-  accessKeySecret: 423542354235
-  roleArn: acs:ram::1088918147236349:role/ramoss
-  tokenExpireTime: 3600
-  endPoint: http://oss-cn-shenzhen.aliyuncs.com
+  accessKeyID: 43132414fa
+  accessKeySecret: badafadf
+  roleArn: badfasfafas
+  tokenExpireTime: 098
+  endPoint: dfafdas
   policyFile: '{"Statement":[{"Action":["oss:*"],"Effect":"Allow","Resource":["acs:oss:*:*:*"]}],"Version":"1"}'
-  bucket: chuanyin-test
-  region: cn-shenzhen
-  faceImageUrl: http://119.23.55.542352354
-
-
-logging:
-  file:
-    path: /usr/local/java_workspace/logs
-  config: classpath:logback-spring.xml
-  pattern:
-    console: 'logging.pattern.console=[%d{yyyy-MM-dd HH:mm:ss}] -- [%-5p]: [%c] -- %m%n'
-    file: '[%d{yyyy-MM-dd HH:mm:ss}] -- [%-5p]: [%c] -- %m%n'
-
-
+  bucket: fdadfafa
+  region: fdafasfsa
+  faceImageUrl: 1431243124
 
 
 
