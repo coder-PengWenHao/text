@@ -195,3 +195,6 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 [2m2023-07-17 16:17:18.011[0;39m [32m INFO[0;39m [35m29068[0;39m [2m---[0;39m [2m[nio-8081-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
 [2m2023-07-17 16:17:18.012[0;39m [32m INFO[0;39m [35m29068[0;39m [2m---[0;39m [2m[nio-8081-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
 [2m2023-07-17 16:17:18.033[0;39m [32m INFO[0;39m [35m29068[0;39m [2m---[0;39m [2m[nio-8081-exec-1][0;39m [36mcom.example.text.web.TestContrller      [0;39m [2m:[0;39m oom开始.....
+2023-07-17 16:20:31.264  INFO 21664 --- [           main] com.example.text.TextApplicationTests    : Starting TextApplicationTests using Java 1.8.0_241 on coderpwh with PID 21664 (started by coderpwh in E:\my_workSpacke\text)
+2023-07-17 16:20:31.265  INFO 21664 --- [           main] com.example.text.TextApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2023-07-17 16:20:32.440  INFO 21664 --- [           main] com.example.text.TextApplicationTests    : Started TextApplicationTests in 1.528 seconds (JVM running for 2.242)
