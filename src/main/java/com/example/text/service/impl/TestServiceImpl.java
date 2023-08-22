@@ -215,7 +215,7 @@ public class TestServiceImpl implements TestService {
      */
     public List<UserInfo> getAllUserInfo() {
         List<UserInfo> list = new ArrayList<>();
-        for (int i = 0; i < 10000000; i++) {
+        for (int i = 0; i < 10000; i++) {
             UserInfo userInfo = new UserInfo();
             list.add(userInfo);
         }

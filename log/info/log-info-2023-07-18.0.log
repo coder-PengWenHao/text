@@ -1,0 +1,6 @@
+2023-07-18 16:14:39.642  INFO 15904 --- [           main] com.example.text.TextApplicationTests    : Starting TextApplicationTests using Java 1.8.0_241 on coderpwh with PID 15904 (started by coderpwh in E:\my_workSpacke\text)
+2023-07-18 16:14:39.643  INFO 15904 --- [           main] com.example.text.TextApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2023-07-18 16:14:40.857  INFO 15904 --- [           main] com.example.text.TextApplicationTests    : Started TextApplicationTests in 1.548 seconds (JVM running for 2.228)
+2023-07-18 16:23:03.753  INFO 11536 --- [           main] com.example.text.TextApplicationTests    : Starting TextApplicationTests using Java 1.8.0_241 on coderpwh with PID 11536 (started by coderpwh in E:\my_workSpacke\text)
+2023-07-18 16:23:03.757  INFO 11536 --- [           main] com.example.text.TextApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2023-07-18 16:23:05.181  INFO 11536 --- [           main] com.example.text.TextApplicationTests    : Started TextApplicationTests in 1.767 seconds (JVM running for 2.565)
